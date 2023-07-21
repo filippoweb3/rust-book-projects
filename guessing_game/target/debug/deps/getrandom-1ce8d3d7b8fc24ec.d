@@ -1,0 +1,11 @@
+/Users/filippo/Documents/GitHub/rust-book-projects/guessing_game/target/debug/deps/getrandom-1ce8d3d7b8fc24ec.rmeta: /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/lib.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error_impls.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util_libc.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/use_file.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/macos.rs
+
+/Users/filippo/Documents/GitHub/rust-book-projects/guessing_game/target/debug/deps/getrandom-1ce8d3d7b8fc24ec.d: /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/lib.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error_impls.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util_libc.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/use_file.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/macos.rs
+
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/lib.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/error_impls.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/util_libc.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/use_file.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.9/src/macos.rs:
