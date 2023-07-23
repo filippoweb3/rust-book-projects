@@ -54,7 +54,67 @@ fn main() {
 
         // Mutable References
 
+        let mut s = String::from("hello");
+        
+        change(&mut s);
+        
+        println!("{s}"); // this prints "hello, world!", so we mutated s using a reference!
 
+        // the pointer has access to the data that can be mutated
+        // in the previous example we calculated a length, no mutation
+        // here we mutated the data!
+
+        // No multiple mutable references!
+
+        {
+            let r1 = &mut s;
+        } // we must take r1 out of scope
+
+        let r2 = &mut s; // and set another mutable reference
+
+        println!("{r2}");
+
+        // No immutable and mutable references!
+        // if you create an immutable reference you do not expect changes to what you are referencing to
+
+        let r3 = &s;
+        let r4 = &s;
+
+        println!("{r3} {r4}"); // r3 and r4 will not be used after this point
+
+        let r5 = &mut s; // we can have a mutable reference, scope for r3 and r4 ends here
+
+        // println!("{r5}");
+
+        // let ref_to_nothing = dangle(); this won't work
+
+        let no_ref_to_nothing = no_dangle();
+
+        let word = first_word(r5);
+
+        println!("{word}"); // this will print value 6
+
+        s.clear(); // empties the string
+
+        println!("{s}"); // s now has value ""
+
+        // the word index is still valid but the word is now empty
+
+        // Slices 
+
+        let s = String::from("hello world");
+
+        let hello = &s[0..5]; // [start_index..end_index], end_index is one more than the last position of the slice
+        let world = &s[6..11];
+
+        println!("{hello} {world}");
+
+        let slice = &s[0..2]; // is the same as &s[..2]
+
+        let len = s.len();
+
+        let slice = &s[3..len]; // same as &s[3..]
+        let slice = &s[0..len]; // same as &s[..]
 
     }
     
@@ -88,3 +148,33 @@ fn calculate_length(s: String) -> (String, usize) {
 fn calculate_length_ref(s: &String) -> (usize) { // s is a ref to a String
     s.len()
 } // s goes out of scope, but does not have ownership over what it refers to and this String is not dropped
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world!");
+}
+
+// fn dangle() -> &String { 
+//    let s = String::from("hello");
+//    &s
+//} // s goes out of scope and is dropped, the ref will point to empty memory!
+
+fn no_dangle() -> String {
+
+    let s = String::from("hello");
+
+    s
+
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes(); // [104, 101, 108, 108, 111, 44, 32, 119, 111, 114, 108, 100, 33]
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' { // b' ' is equal to 32
+            println!("{item}");
+            return i;
+        }
+    }
+
+    s.len()
+}
