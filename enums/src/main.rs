@@ -1,3 +1,17 @@
+#[derive(Debug)]
+enum IpAddrKind {
+    V4,
+    V6
+}
+
 fn main() {
-    println!("Hello, world!");
+    let four = IpAddrKind::V4;
+    let six = IpAddrKind::V6;
+
+    dbg!(route(six));
+
+}
+
+fn route(ip_kind: IpAddrKind) -> IpAddrKind {
+    ip_kind
 }
