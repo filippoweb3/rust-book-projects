@@ -91,5 +91,3 @@ fn value_in_cents(coin: Coin) -> u8 { // takes an argument of the Type Coin
         },
     }
 }
-
-fn 
