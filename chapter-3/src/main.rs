@@ -1,9 +1,10 @@
 fn main() {
-    let x = 5;
+    let mut x = 5; // making x mutable
     println!("The value of x is: {x}");
-    let x = 6;
+    x = 6;
     println!("The value of x is: {x}");
 }
 
-const TWO_HOURS_IN_SECONDS = 60 * 60 * 3;
+const TWO_HOURS_IN_SECONDS = 60 * 60 * 2; // specifying a constant
+
 
