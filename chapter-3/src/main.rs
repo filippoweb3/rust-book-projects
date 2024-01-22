@@ -9,26 +9,36 @@ fn main() {
     println!("There are {:?} seconds in two hours.", TWO_HOURS_IN_SECONDS);
 
     let x = 5;
+    println!("The value of x is: {x}");
+
     let x = " "; // shadowing
+    println!("The value of x is: {x}");
 
     let x = 1_000;
     println!("The value of x is: {x}");
 
     let x = 2.1;
+    println!("The value of x is: {x}");
 
     let x = true;
+    println!("The value of x is: {x}");
 
     let x = 'Z';
+    println!("The value of x is: {x}");
 
     let tup = (100, 1.1, 'Z');
     let (x, y, z) = tup;
     println!("The first element in the tuple is: {:?}.", tup.0);
+    println!("The values of tup are: {x}, {y}, and {z}.");
 
     let a = [1, 2, 3];
     let first = a[0];
 
+    println!("The first value of a is: {first}.");
+
     another_function(5, "kg");
     let x = another_function(5, "kg");
+    println!("The weight of the object is: {x}");
 
     let condition = true;
     let number = if condition {1} else {2};
