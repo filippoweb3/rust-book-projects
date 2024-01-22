@@ -30,6 +30,81 @@ fn main() {
     another_function(5, "kg");
     let x = another_function(5, "kg");
 
+    let condition = true;
+    let number = if condition {1} else {2};
+
+    println!("The value of the number is: {}", number);
+
+    if number % 2 == 0 && number % 1 == 0 {
+        println!("The number is divisible by 1 and 2.");
+    } else if number % 2 == 0 || number % 1 == 0 {
+        println!("The number is divisible by 1 or 2.");
+    } else {
+        println!("The number is not divisible by 1 or 2.");
+    }
+
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+
+            if count == 2 {
+                break 'counting_up;
+            }
+
+            remaining -= 1;
+        }
+
+        count += 1;
+
+    }
+
+    println!("End count = {count}");
+
+
+    let mut number = 3;
+
+    loop {
+
+        println!("{number}");
+
+        number -= 1;
+
+        if number == 0 {
+            break
+        }
+
+    }
+
+    println!("GO!!!");
+
+
+    let mut number = 3;
+
+    while number != 0 {
+
+        println!("{number}");
+
+        number -= 1;
+
+    }
+
+    println!("GO!!!");
+
+    for number in (1..4).rev() {
+
+        println!("{number}");
+
+    }
+
+    println!("GO!!!");
+
 }
 
 fn another_function(x: i32, unit: &str) -> i32 { // specifying the return type
