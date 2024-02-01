@@ -2,7 +2,7 @@ fn main() {
 
     const DAILY_REWARDS: f64 = 25000.0; // daily rewards to active staking
 
-    let rewards: f64 = my_rewards(DAILY_REWARDS, 66000000.0, 850000.0, "l"); // calling the function
+    let rewards: f64 = my_rewards(DAILY_REWARDS, 66000000.0, 20000.0, "high"); // calling the function
 
     println!("My daily rewards from active staking are {}", rewards); // printing results
 
