@@ -17,7 +17,7 @@ println!("{s}");
 let x = 5;
 let y = x;
 
-println!("The value of x and y is {x}");
+println!("The value of x is {x}, the value of y is {y}");
 
 {
     let s1 = String::from("hello");
