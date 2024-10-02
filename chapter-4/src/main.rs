@@ -1,3 +1,10 @@
 fn main() {
-    println!("Hello, world!");
+{
+
+    let s = "hello"; //string literal
+
+    println!("{s}")
+
+}
+
 }
