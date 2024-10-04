@@ -65,6 +65,7 @@ println!("{s}");
 
 {
     let r1 = &mut s;
+    println!("{r1}");
 } // mutable reference goes out of scope
 
 let r2 = &mut s;
@@ -79,6 +80,17 @@ println!("{r1} and {r2}");
 
 let r3 = &mut s;
 println!("{r3}");
+
+let s = String::from("Hello, world!");
+
+let hello = &s[0..6];
+let world = &s[7..13];
+
+println!("{hello} {world}");
+
+let word = first_word(&s);
+
+println!("{word}");
 
 }
 
@@ -111,4 +123,20 @@ fn calculate_length(s: &String) -> usize {
 
 fn change(some_string: &mut String) {
     some_string.push_str(", world!");
+}
+
+// fn dangle() -> &String {
+//    let s = String::from("hello");
+//    &s
+//}
+
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
 }
