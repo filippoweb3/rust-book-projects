@@ -11,10 +11,12 @@ fn main() {
 
     let mut user1 = User { // User instance
         active: true,
-        username: String::from("somename"),
-        email: String::from("someemail"),
+        username: String::from("user1name"),
+        email: String::from("user1email"),
         sign_in_count: 1,
     };
+
+    println!("{}", user1.email);
 
     user1.email = String::from("anotheremail");
 
@@ -29,7 +31,7 @@ fn main() {
 
     let user3 = User {
         email: String::from("user3email"), // change only email
-        ..user2 // rest filed like user 2
+        ..user1 // rest filed like user 2
     };
 
     println!("{:?}", user3);
