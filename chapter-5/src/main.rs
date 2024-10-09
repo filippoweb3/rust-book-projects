@@ -1,11 +1,29 @@
 #[derive(Debug)] // used to print struct values
-
 struct User {
     active: bool,
     username: String,
     email: String,
     sign_in_count: u64,
-}    
+}
+
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
+#[derive(Debug)] // used to print struct values
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 { // defining the area method
+        self.width * self.height
+    }
+
+    fn width(&self) -> bool {
+        self.width > 0
+    }
+}
 
 fn main() {
 
@@ -36,6 +54,30 @@ fn main() {
 
     println!("{:?}", user3);
 
+
+    let black = Color(0,0,0);
+    let origin = Point(0,0,0);
+
+    let scale = 3;
+    let rect1 = Rectangle {
+        width: dbg!(30 * scale),
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.", 
+        rect1.area() // using the area method
+    );
+
+    println!(
+        "The width of the rectangle is {}.", 
+        rect1.width // using the width field or .width() method
+    );
+
+    println!("{:#?}", rect1);
+
+    dbg!(&rect1);
+
 }
 
 fn build_user(email: String, username: String) -> User {
@@ -46,4 +88,8 @@ fn build_user(email: String, username: String) -> User {
         email,
         sign_in_count: 1,
     }
+}
+
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
