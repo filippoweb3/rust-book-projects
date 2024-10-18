@@ -42,10 +42,19 @@ mod back_of_house {
     }
 }
 
+use crate::front_of_house::hosting; // idiomatic "use"
+
+use crate::front_of_house::hosting::add_to_waitlist; //unidiomatic use
+
 pub fn eat_at_restaurant() {
+
     crate::front_of_house::hosting::add_to_waitlist();
 
     front_of_house::hosting::add_to_waitlist();
+
+    hosting::add_to_waitlist(); // idiomatic "use"
+
+    add_to_waitlist(); //unidiomatic use
 
     let mut meal = back_of_house::Breakfast::summer("Rye");
     meal.toast = String::from("Wheat");
