@@ -1,0 +1,10 @@
+/Users/filippo/Documents/GitHub/rust-book-projects/restaurant/target/debug/deps/libgetrandom-712bfd12a3f23bb7.rmeta: /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/lib.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error_impls.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util_libc.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/getentropy.rs
+
+/Users/filippo/Documents/GitHub/rust-book-projects/restaurant/target/debug/deps/getrandom-712bfd12a3f23bb7.d: /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/lib.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error_impls.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util_libc.rs /Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/getentropy.rs
+
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/lib.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/error_impls.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/util_libc.rs:
+/Users/filippo/.cargo/registry/src/index.crates.io-6f17d22bba15001f/getrandom-0.2.15/src/getentropy.rs:
