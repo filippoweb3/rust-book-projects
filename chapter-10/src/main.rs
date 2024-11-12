@@ -1,3 +1,30 @@
+struct Point<T> {
+    x: T,
+    y: T,
+}
+
+impl<T> Point<T> { // impl over generic type
+    fn x(&self) -> &T {
+        &self.x
+    }
+}
+
+struct Point2<X1, Y1> {
+    x: X1,
+    y: Y1,
+}
+
+impl<X1, Y1> Point2<X1, Y1> {
+    fn mixup<X2, Y2> (self, other: Point2<X2, Y2>) -> Point2<X1, Y2> {
+        Point2 {
+            x: self.x,
+            y: other.y,
+        }
+    }
+}
+
+// impl Point<f32> implementation over concrete type
+
 fn main() {
     let number_list = vec![34, 50, 25, 100, 65];
     
@@ -19,10 +46,21 @@ fn main() {
 
     println!("The largest number is {result}.");
 
-
     let result = largest(&char_list);
 
     println!("The largest number is {result}.");
+
+    let integer = Point { x: 5, y: 10 };
+    let float = Point { x: 1.0, y: 4.0};
+
+    println!("integer.x = {}", integer.x());
+
+    let p1 = Point2 { x: 5, y: 10.4};
+    let p2 = Point2 { x: "Hello", y: 'c'};
+
+    let p3 = p1.mixup(p2);
+
+    println!("p3.x = {}, p3.y = {}", p3.x, p3.y);
 
 }
 
