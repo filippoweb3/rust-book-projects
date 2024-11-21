@@ -1,1 +1,1 @@
-/Users/filippo/Documents/GitHub/rust-book-projects/chapter-10/target/debug/chapter-10: /Users/filippo/Documents/GitHub/rust-book-projects/chapter-10/src/main.rs
+/Users/filippo/Documents/GitHub/rust-book-projects/chapter-10/target/debug/chapter-10: /Users/filippo/Documents/GitHub/rust-book-projects/aggregator/src/lib.rs /Users/filippo/Documents/GitHub/rust-book-projects/chapter-10/src/main.rs
