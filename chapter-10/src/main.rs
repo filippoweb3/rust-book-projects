@@ -23,7 +23,9 @@ impl<X1, Y1> Point2<X1, Y1> {
     }
 }
 
-use aggregator::{Summary, Tweet};
+use core::prelude;
+
+use aggregator::{NewsArticle, Summary, Tweet};
 
 // impl Point<f32> implementation over concrete type
 
@@ -74,6 +76,19 @@ fn main() {
     };
 
     println!("1 new tweet: {}", tweet.summarize());
+
+    let article = NewsArticle {
+        headline: String::from(
+            "Penguins win the Stanley Cup Championship!"
+        ),
+        location: String::from("Pittsburg, PA, USA"),
+        author: String::from("Iceburg"),
+        content: String::from(
+            "The Pittsburg Penguins.",
+        ),
+    };
+
+    println!("New article available! {}", article.summarize());
 
 }
 
