@@ -24,8 +24,9 @@ impl<X1, Y1> Point2<X1, Y1> {
 }
 
 use core::prelude;
+use std::fmt::Debug;
 
-use aggregator::{NewsArticle, Summary, Tweet};
+use aggregator::{notify, NewsArticle, Summary, Tweet, Pair};
 
 // impl Point<f32> implementation over concrete type
 
@@ -90,6 +91,16 @@ fn main() {
 
     println!("New article available! {}", article.summarize());
 
+    println!("{:?}", notify(&tweet));
+
+    dbg!(println!("{:?}", returns_summarizable()));
+
+    let pair_of_integers = Pair::new("true", "false");
+
+    println!("{:?}", pair_of_integers.cmp_display());
+
+    println!("{:?}", Pair::new("true", "false"));
+
 }
 
 fn largest_i32 (list: &[i32]) -> &i32 {
@@ -129,4 +140,15 @@ fn largest<T: std::cmp::PartialOrd>(list: &[T]) -> &T {
 
     largest
 
+}
+
+fn returns_summarizable() -> impl Summary + Debug {
+    Tweet {
+        username: String::from("horse_ebooks"),
+        content: String::from(
+            "of course, as you probably already know, people"
+        ),
+        reply: false,
+        retweet: false,
+    }
 }

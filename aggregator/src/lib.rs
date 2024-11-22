@@ -32,6 +32,7 @@ impl Summary for NewsArticle {
 //    }
 //}
 
+#[derive(Debug)]
 pub struct Tweet {
     pub username: String,
     pub content: String,
@@ -44,3 +45,32 @@ impl Summary for Tweet {
         format!("@{}", self.username)
     }
 }
+
+pub fn notify(item: &impl Summary) {
+    println!("Breaking news! {}", item.summarize())
+}
+
+//trait bound
+//pub fn notify<T: Summary>(item: &T) {}
+//pub fn notify<T: Summary>(item1: &T, item2: &T) {} // good when we have 2 param
+
+#[derive(Debug)]
+pub struct Pair<T> {
+    pub x: T,
+    pub y: T,
+}
+impl<T> Pair<T> {
+    pub fn new(x: T, y: T) -> Self {
+        Self {x, y}
+    }
+}
+
+impl<T: core::fmt::Display + PartialOrd> Pair<T> {
+    pub fn cmp_display(&self) {
+        if self.x >= self.y {
+            println!("The largest number is {}.", self.x);
+        } else {
+            println!("The largest number is {}.", self.y)
+        }
+    }
+} 
