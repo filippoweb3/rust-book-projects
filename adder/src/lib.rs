@@ -44,6 +44,8 @@ pub fn greeting(name: &str) -> String {
     //String::from("Hello")
 }
 
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -81,6 +83,15 @@ mod tests {
     #[should_panic(expected = "less than or equal to 100")]
     fn greater_than_100() {
         Guess::new(200);
+    }
+
+    #[test]
+    fn it_works() -> Result<(), String> {
+        if 2 + 2 == 4 {
+            Ok(())
+        } else {
+            Err(String::from("two plus two does not equal to four"))
+        }
     }
 
 }
