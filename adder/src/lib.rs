@@ -36,15 +36,17 @@ impl Rectangle {
 }
 
 pub fn add_two(a: i32) -> i32 {
-    a + 3
+    internal_adder(a, 2)
+}
+
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
 }
 
 pub fn greeting(name: &str) -> String {
     format!("Hello {name}!")
     //String::from("Hello")
 }
-
-
 
 #[cfg(test)]
 mod tests {
@@ -67,7 +69,7 @@ mod tests {
 
     #[test]
     fn it_adds_two() {
-        assert_ne!(4, add_two(2));
+        assert_eq!(4, add_two(2));
     }
 
     #[test]
