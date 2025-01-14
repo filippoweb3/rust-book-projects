@@ -1,1 +1,1 @@
-/Users/filippo/Documents/GitHub/rust-book-projects/minigrep/target/debug/minigrep: /Users/filippo/Documents/GitHub/rust-book-projects/minigrep/src/main.rs
+/Users/filippo/Documents/GitHub/rust-book-projects/minigrep/target/debug/minigrep: /Users/filippo/Documents/GitHub/rust-book-projects/minigrep/src/lib.rs /Users/filippo/Documents/GitHub/rust-book-projects/minigrep/src/main.rs
