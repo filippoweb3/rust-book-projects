@@ -1,4 +1,6 @@
 use std::fmt::Debug;
+extern crate proc;
+use proc::{test_macro};
 
 #[derive(Clone, Debug)]
 struct Person {
@@ -71,6 +73,8 @@ macro_rules! times_five {
         $e * 5
     };
 }
+
+test_macro!();
 
 fn main() {
     let valid_array = [1, 2, 3];
