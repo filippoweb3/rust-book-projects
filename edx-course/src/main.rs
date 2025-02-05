@@ -152,3 +152,45 @@ fn safe_access(index: usize, slice: &[i32]) -> Option<i32> {
 fn area_of_any_shape(shape: Box<dyn Shape>) -> f32 {
     shape.area()
 }
+
+fn square(x: u32) -> u32 {
+    x * x
+}
+
+
+#[cfg(test)]
+mod tests {
+
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn result_test() {
+        let some_result: Result<(), ()> = Ok(());
+        assert!(some_result.is_ok());
+    }
+
+    #[test]
+    fn option_test() {
+        let some_option: Option<u32> = Some(10);
+        assert_eq!(some_option, Some(10));
+    }
+
+    #[test]
+    fn does_square_work() {
+        assert_eq!(square(2), 4);
+    }
+
+    #[test]
+    #[should_panic(expected = "This is panic")]
+
+    fn test_panic() {
+        panic!("This is panic");
+    }
+
+}
