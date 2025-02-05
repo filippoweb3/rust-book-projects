@@ -26,6 +26,18 @@ impl Sound for Dog {
     }
 }
 
+fn multiply_any_number<T: std::ops::Mul<Output = T>>(x: T, y: T) -> T {
+    x * y
+}
+
+trait Edible {
+    fn eat(&self);
+}
+
+struct Bag<T: Edible + Clone + Debug> {
+    content: T,
+}
+
 fn main() {
     let valid_array = [1, 2, 3];
 
@@ -61,6 +73,10 @@ fn main() {
 
     person.make_sound();
     dog.make_sound();
+
+    //Generics
+
+    let multiply = multiply_any_number(10, 10);
     
 
 
