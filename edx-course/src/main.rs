@@ -1,3 +1,5 @@
+use std::fmt::Debug;
+
 #[derive(Clone, Debug)]
 struct Person {
     name: String,
@@ -37,6 +39,32 @@ trait Edible {
 struct Bag<T: Edible + Clone + Debug> {
     content: T,
 }
+trait Shape: Debug {
+    fn area(&self) -> f32;
+}
+
+#[derive(Debug)]
+struct Circle {
+    radius: u32,
+}
+
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Shape for Rectangle {
+    fn area(&self) -> f32 {
+        (self.width * self.height) as f32
+    }
+}
+
+impl Shape for Circle {
+    fn area(&self) -> f32 {
+        3.14 * self.radius as f32 * self.radius as f32
+    }
+}
 
 fn main() {
     let valid_array = [1, 2, 3];
@@ -57,7 +85,7 @@ fn main() {
          println!("Nothing valid was found!");
     }
 
-    //Custom traits
+    // Custom traits
 
     let person = Person {
         name: "John".to_string(),
@@ -74,11 +102,26 @@ fn main() {
     person.make_sound();
     dog.make_sound();
 
-    //Generics
+    // Generics & Associated Types
 
     let multiply = multiply_any_number(10, 10);
     
+    // Dynamic dispatch & Smart Pointers
 
+    let circle = Circle { radius: 10 };
+    let rectangle = Rectangle { width: 10, height: 10 };
+
+    let circle_area = area_of_any_shape(Box::from(circle));
+    let rect_area = area_of_any_shape(Box::from(rectangle));
+
+    println!("Circle area: {}", circle_area);
+    println!("Rectangle area: {}", rect_area);
+
+    // let shapes: Vec<dyn Shape> = vec![circle, rectangle];
+    // let shapes: Vec<Box<dyn Shape>> = vec![Box::new(circle), Box::new(rectangle)];
+    // println!("{:?}", shapes);
+
+    // Macros
 
 }
 
@@ -90,4 +133,8 @@ fn safe_access(index: usize, slice: &[i32]) -> Option<i32> {
     }
     // Otherwise, we're good to return the requested item!
     Some(slice[index])
+}
+
+fn area_of_any_shape(shape: Box<dyn Shape>) -> f32 {
+    shape.area()
 }
