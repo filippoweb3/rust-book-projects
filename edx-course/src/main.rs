@@ -1,3 +1,31 @@
+#[derive(Clone, Debug)]
+struct Person {
+    name: String,
+    age: u32,
+}
+
+#[derive(Clone, Debug)]
+struct Dog {
+    name: String,
+    age: u32,
+}
+
+trait Sound {
+    fn make_sound(&self);
+}
+
+impl Sound for Person {
+    fn make_sound(&self) {
+        println!("Hello, my name is {:?}", self.name);
+    }
+}
+
+impl Sound for Dog {
+    fn make_sound(&self) {
+        println!("Woof, my name is {}", self.name);
+    }
+}
+
 fn main() {
     let valid_array = [1, 2, 3];
 
@@ -16,6 +44,26 @@ fn main() {
     } else {
          println!("Nothing valid was found!");
     }
+
+    //Custom traits
+
+    let person = Person {
+        name: "John".to_string(),
+        age: 32,
+    };
+
+    let person2 = person.clone();
+
+    let dog = Dog {
+        name: "Rex".to_string(),
+        age: 5,
+    };
+
+    person.make_sound();
+    dog.make_sound();
+    
+
+
 }
 
 fn safe_access(index: usize, slice: &[i32]) -> Option<i32> {
