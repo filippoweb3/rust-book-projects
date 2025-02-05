@@ -66,6 +66,12 @@ impl Shape for Circle {
     }
 }
 
+macro_rules! times_five {
+    ($e:expr) => {
+        $e * 5
+    };
+}
+
 fn main() {
     let valid_array = [1, 2, 3];
 
@@ -122,6 +128,10 @@ fn main() {
     // println!("{:?}", shapes);
 
     // Macros
+
+    let times_five = times_five!(10);
+
+    println!("{}", times_five);
 
 }
 
